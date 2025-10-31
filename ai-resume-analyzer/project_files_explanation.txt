@@ -1,0 +1,102 @@
+AI Resume Analyzer Project - Files Explanation
+==============================================
+
+This file provides a brief description of each file and directory in the project, explaining what it is and why it's used.
+
+Root Directory: ai-resume-analyzer/
+- Purpose: Main project directory containing all source code, configurations, and assets for the AI Resume Analyzer web application.
+
+Configuration Files:
+- .dockerignore: Specifies files and directories to exclude when building a Docker image. Used to reduce image size and avoid including unnecessary files like node_modules or logs.
+- .gitignore: Lists files and directories to ignore in Git version control. Prevents sensitive data, build artifacts, and dependencies from being committed.
+- Dockerfile: Defines the Docker image for the application. Used for containerizing the app for consistent deployment across environments.
+- package-lock.json: Locks the exact versions of npm dependencies. Ensures reproducible builds and prevents version conflicts.
+- package.json: Defines project metadata, scripts, and dependencies. Used by npm to manage the project, install packages, and run commands like 'npm run dev'.
+- react-router.config.ts: Configuration for React Router. Customizes routing behavior, loaders, and other features specific to the app.
+- README.md: Project documentation. Provides an overview, setup instructions, features, and links to tutorials. Helps developers and users understand the project.
+- tsconfig.json: TypeScript configuration. Defines compiler options, paths, and type checking rules for the project.
+- vite.config.ts: Vite build tool configuration. Sets up plugins, aliases, and build options for fast development and production builds.
+
+App Directory: app/
+- Purpose: Contains the main application code, including components, routes, and utilities.
+
+- app.css: Global CSS styles. Defines base styles, fonts, and layout rules applied across the app.
+- root.tsx: Root component and layout. Sets up the HTML structure, initializes Puter, and handles global error boundaries.
+- routes.ts: Route definitions. Maps URLs to components and defines data loaders/actions for React Router.
+
+Components Directory: app/components/
+- Purpose: Reusable UI components for the application.
+
+- Accordion.tsx: Accordion component. Used for collapsible sections in the UI, improving space efficiency.
+- ATS.tsx: ATS (Applicant Tracking System) component. Displays ATS scores and feedback for resume analysis.
+- Details.tsx: Details component. Shows detailed information about resumes or jobs.
+- FileUploader.tsx: File uploader component. Handles resume file uploads with drag-and-drop functionality.
+- Navbar.tsx: Navigation bar. Provides links and navigation across the app.
+- ResumeCard.tsx: Resume card component. Displays resume previews or summaries in a card format.
+- ScoreBadge.tsx: Score badge. Visual indicator for scores (e.g., ATS scores).
+- ScoreCircle.tsx: Score circle. Circular progress indicator for scores.
+- ScoreGauge.tsx: Score gauge. Gauge-style display for numerical scores.
+- Summary.tsx: Summary component. Provides summarized feedback or results.
+
+Lib Directory: app/lib/
+- Purpose: Utility libraries and integrations.
+
+- pdf2img.ts: PDF to image converter. Converts PDF resumes to images for preview or processing.
+- puter.ts: Puter integration. Handles authentication, storage, and AI services using Puter.js.
+- utils.ts: General utilities. Contains helper functions for common tasks like styling or data manipulation.
+
+Routes Directory: app/routes/
+- Purpose: Page components for different routes.
+
+- auth.tsx: Authentication page. Handles user login/signup via Puter.
+- home.tsx: Home page. Main landing page with overview and navigation.
+- resume.tsx: Resume page. Displays and manages individual resumes.
+- upload.tsx: Upload page. Interface for uploading resumes.
+- wipe.tsx: Wipe page. Allows users to clear stored data.
+
+Constants Directory: constants/
+- Purpose: Application constants.
+
+- index.ts: Defines app-wide constants like API keys, limits, or configuration values.
+
+Public Directory: public/
+- Purpose: Static assets served directly by the web server.
+
+- favicon.ico: Website favicon. Icon displayed in browser tabs.
+- pdf.worker.min.mjs: PDF.js worker. Handles PDF parsing in the browser.
+
+Icons Directory: public/icons/
+- Purpose: SVG icons for the UI.
+
+- ats-bad.svg: Icon for bad ATS score.
+- ats-good.svg: Icon for good ATS score.
+- ats-warning.svg: Icon for warning ATS score.
+- back.svg: Back arrow icon.
+- check.svg: Checkmark icon.
+- cross.svg: Cross icon.
+- info.svg: Info icon.
+- pin.svg: Pin icon.
+- warning.svg: Warning icon.
+
+Images Directory: public/images/
+- Purpose: Image assets.
+
+- bg-auth.svg: Background for auth page.
+- bg-main.svg: Main background image.
+- bg-small.svg: Small background variant.
+- pdf.png: PDF icon or placeholder.
+- resume_01.png, resume_02.png, resume_03.png: Sample resume images.
+- resume-scan-2.gif, resume-scan.gif: Animated GIFs for resume scanning effect.
+
+Readme Directory: public/readme/
+- Purpose: Images used in README documentation.
+
+- hero.webp: Hero banner for README.
+- jsmpro.webp: JSM Pro course banner.
+- videokit.webp: Video kit banner.
+
+Types Directory: types/
+- Purpose: TypeScript type definitions.
+
+- index.d.ts: General type definitions for the app.
+- puter.d.ts: Type definitions for Puter.js API.
