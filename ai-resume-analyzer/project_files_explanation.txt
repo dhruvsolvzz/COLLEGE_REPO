@@ -121,6 +121,68 @@ If you'd like, I can also:
 - Expand this file to include the props/types for each component by reading the `.tsx` files and extracting prop definitions.
 - Generate a markdown version (`docs/components.md`) with links to source files.
 
+Project Dependencies Explained
+---------------------------
+This section explains the key dependencies used in the project and why they're necessary.
+
+Main Dependencies:
+----------------
+1. React Core & DOM (`react`, `react-dom`)
+   - The foundation of our UI - React is used for building the component-based interface
+   - React DOM handles rendering these components to the web browser
+   - Using version 19+ for latest features like concurrent rendering and suspense
+
+2. Routing (`react-router`, `@react-router/node`, `@react-router/serve`)
+   - Handles client-side navigation between pages
+   - Provides server-side rendering capabilities
+   - Manages URL states and page transitions
+   - Node and serve packages enable server-side routing features
+
+3. PDF Processing (`pdfjs-dist`)
+   - Mozilla's PDF.js for parsing and rendering PDF resumes
+   - Enables extracting text and creating preview images from uploaded PDFs
+   - Runs in the browser to handle PDFs without server processing
+
+4. File Upload (`react-dropzone`)
+   - Provides drag-and-drop file upload functionality
+   - Handles file validation and preview generation
+   - Makes the upload experience smooth and user-friendly
+
+5. State Management (`zustand`)
+   - Lightweight state management for React
+   - More straightforward than Redux for our needs
+   - Manages global app state (user data, resume lists, etc.)
+
+6. Styling Utilities:
+   - `clsx` and `tailwind-merge`: Smart CSS class combination and deduplication
+   - `tailwindcss`: Utility-first CSS framework for rapid UI development
+   - `tw-animate-css`: Animation utilities for Tailwind
+
+Development Dependencies:
+----------------------
+1. TypeScript Stack:
+   - `typescript`: Static typing for better code quality
+   - `@types/*`: Type definitions for React and Node.js
+   - Essential for catching errors early and improving maintainability
+
+2. Build Tools:
+   - `vite`: Modern, fast bundler and development server
+   - `vite-tsconfig-paths`: Path aliases support in Vite
+   - `@tailwindcss/vite`: Tailwind integration for Vite
+
+3. Development Utilities:
+   - `@react-router/dev`: Development tools for React Router
+   - Various TypeScript types for better development experience
+
+The combination of these dependencies enables:
+- Fast development with hot reloading (Vite)
+- Type-safe code (TypeScript)
+- Smooth file uploads (Dropzone)
+- PDF processing (PDF.js)
+- Clean, maintainable styling (Tailwind)
+- Efficient state management (Zustand)
+- Modern routing features (React Router)
+
 End of explanations.
 
 
